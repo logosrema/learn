@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "bettest");
+$conn = mysqli_connect("localhost", "root", "", "lot");
 
 // Load the JSON data from the file
 $json = file_get_contents('data.json');
@@ -13,7 +13,6 @@ $array = json_decode($json,true);
 foreach ($array as $key => $value) {
     //  echo "<pre>";
     //  print_r($value['sample']);
-
      $sample = json_encode($value['sample']);
      $rows = intval($value['rows']);
      $start = intval($value['start']);
